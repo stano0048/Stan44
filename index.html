@@ -2,44 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Hub</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Car Dealership</title>
 </head>
 <body>
     <header>
-        <h1>Sports Hub</h1>
+        <h1>Welcome to Our Car Dealership</h1>
+        <nav>
+            <ul>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#fixtures">Fixtures</a></li>
-            <li><a href="#live-scores">Live Scores</a></li>
-            <li><a href="#standings">Standings</a></li>
-            <li><a href="#player-stats">Player Statistics</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="fixtures">
-            <h2>Fixtures</h2>
-            <div id="fixtures-list"></div>
-        </section>
-        <section id="live-scores">
-            <h2>Live Scores</h2>
-            <div id="live-scores-list"></div>
-        </section>
-        <section id="standings">
-            <h2>Standings</h2>
-            <div id="standings-table"></div>
-        </section>
-        <section id="player-stats">
-            <h2>Player Statistics</h2>
-            <div id="player-stats-table"></div>
-        </section>
-    </main>
+
+    <section id="cars">
+        <h2>Our Cars</h2>
+        <div class="car">
+            <img src="car1.jpg" alt="Car 1">
+            <h3>Car Model 1</h3>
+            <p>Price: $20,000</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="car">
+            <img src="car2.jpg" alt="Car 2">
+            <h3>Car Model 2</h3>
+            <p>Price: $25,000</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <!-- Add more car models as needed -->
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a leading car dealership offering the best prices and selections.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Sports Hub. All Rights Reserved.</p>
+        <p>&copy; 2023 Car Dealership. All rights reserved.</p>
     </footer>
-    <script src="scripts.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
+```
+
+### CSS (styles.css)
+
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.car {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.car:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buy-button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
+```
+
+### JavaScript (script.js)
+
+```javascript
+document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Thank you for your interest! A representative will contact you shortly.');
+    });
+});
+```
+
+### Explanation:
+- **HTML Structure**: This code sets up a basic layout with sections for cars, about us, and contact information.
+- **CSS Styling**: Provides styling for the layout, including hover effects on the car cards and buttons.
+- **JavaScript Interaction**: Adds an alert when a user clicks the "Buy Now" button.
+
+### Next Steps:
+- Replace the placeholder image sources with actual car images.
+- Expand the car listings as needed.
+- Consider adding more advanced features like a search/filter function or a responsive design for mobile compatibility.
